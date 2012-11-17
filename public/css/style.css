@@ -16,6 +16,13 @@ body
 	input:-moz-placeholder {
 	    color: #bababa;
 	}
+	textarea::-webkit-input-placeholder {
+	    color: #bababa;
+	}
+	textarea:-moz-placeholder {
+	    color: #bababa;
+	}
+
 
 	.headline {
 		font-size:32px;
@@ -75,10 +82,18 @@ body
 			font-size:35px;
 		}
 		
+		.main h3 {
+			color: #50382e;
+		}
+		
 		.main p {
 			line-height:34px;
 			font-size:21px;
 			margin-bottom:20px;
+		}
+		
+		.suggestions a {
+			color: #9a6d5b;
 		}
 	
 	
@@ -102,7 +117,19 @@ body
 		}
 	
 	
-	
+	textarea.large {
+	    padding-left:12px;
+	    padding-top:10px;
+	    padding-bottom:6px;
+	    font-size:20px;		
+	    -moz-border-radius:10px 10px 10px 10px;
+	    -webkit-border-radius: 10px;
+	    border:1px solid #acaca9;
+		box-shadow:inset 0 0 20px #dfdfdd;
+		width:310px;
+    	color:#a02d31;
+		font-family:BellGothic-Bold;
+	}
 	
 	
 	/* Old code which I'm using as the base design, will remove or port to the top of this line*/
