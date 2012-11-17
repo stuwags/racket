@@ -8,6 +8,16 @@ class DefaultController < ApplicationController
       ).parsed_response
     end
   end
+  
+  def landing
+    if access_token
+      @profiles = HTTParty.get(profiles_url,
+        :query => {:access_token => access_token}
+      ).parsed_response
+    end
+    
+     render :template => 'layouts/home'
+  end
 
 private
 

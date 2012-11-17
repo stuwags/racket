@@ -1,0 +1,341 @@
+body
+{
+	margin:auto;
+	padding-top:20px;
+	font-family:BellGothic-Bold;
+	color:#50382e;
+	background:url(../img/bg.png) repeat;
+	width:1005px;
+}
+	
+	.bold { font-family:BellGothicBT-Black; }
+
+	input::-webkit-input-placeholder {
+	    color: #bababa;
+	}
+	input:-moz-placeholder {
+	    color: #bababa;
+	}
+
+	.headline {
+		font-size:32px;
+		text-align:center;
+		margin-top:20px;
+		margin-bottom:25px;
+		text-shadow:#fff 1px 1px; 
+	}
+	
+	h1, h2 { text-shadow:#fff 1px 1px; }
+	
+	.screen_wrapper {
+		background:#fff;
+		padding: 10px;
+		border-radius: 15px;
+		background:url(../img/screen.png);
+		width:1000px;
+		margin-top:-43px;
+		float:left;
+	}
+	
+		.screen {
+			background: white;
+			padding: 10px;
+			border-radius: 15px;
+			width:980px;
+			float:left;
+		}
+	
+	
+	a.button {
+		color: white;
+		background: #1AAD63;
+		text-decoration: none;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 5px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 28px;
+		border: 1px solid #0B8940;
+	}
+	
+		a.button:hover {
+			border:1px solid #19784d;
+		}
+	
+	
+	.main {
+		width: 590px;
+		padding-left:20px;
+		float:left;
+		padding-right:20px;
+	}
+	
+		.main h2 {
+			font-size:35px;
+		}
+		
+		.main p {
+			line-height:34px;
+			font-size:21px;
+			margin-bottom:20px;
+		}
+	
+	
+	.side {
+		float:left;
+		border-left: 3px solid #f4f4f4;
+		width:320px;
+		padding-left:20px;
+		margin-top:25px;
+	}
+	
+		.side h3 {
+			font-size:25px;
+		}
+		
+		.side .box {
+			background:#f7f8f5;
+			box-shadow: inset 0px 0px 2px 3px #eff0ee;
+			padding:8px;
+			margin-top:10px;
+		}
+	
+	
+	
+	
+	
+	/* Old code which I'm using as the base design, will remove or port to the top of this line*/
+	
+	
+	#signupbutton {
+		margin-top:-10px;
+	}
+
+		 .fadeThis {
+			position:relative;
+			display:block;
+			height: 67px;
+ 			cursor:pointer;
+		}
+	
+		 .fadeThis * {
+		  display: none;
+		}
+	
+		 .fadeThis span.hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			height: 67px;
+		}
+		
+		#signupbutton .fadeThis {
+			background:url(../img/signupbutton.png) 0 0 no-repeat;
+			width: 513px;
+		}
+		
+		 #signupbutton .fadeThis span.hover {
+			background:url(../img/signupbutton.png) 0 -67px no-repeat;
+			width: 513px;
+		}
+		
+		
+		#logobutton .fadeThis {
+			background:url(../img/logo.png) 0 0 no-repeat;
+			width: 317px;
+			height:120px;
+		}
+		 #logobutton .fadeThis span.hover {
+			background:url(../img/logo.png) 0 -119px no-repeat;
+			width: 317px;
+			height:120px;
+		}
+
+
+		#nextbutton { margin-top:10px; margin-left:490px; position:absolute; }
+		#nextbutton .fadeThis {
+			background:url(../img/nextbutton.png) 0 0 no-repeat;
+			width: 164px;
+		}
+		 #nextbutton .fadeThis span.hover {
+			background:url(../img/nextbutton.png) 0 -67px no-repeat;
+			width: 164px;
+		}
+		
+		#finishbutton { margin-top:30px; margin-left:470px; position:absolute; }
+		#finishbutton .fadeThis {
+			background:url(../img/finishbutton.png) 0 0 no-repeat;
+			width: 164px;
+		}
+		
+		 #finishbutton .fadeThis span.hover {
+			background:url(../img/finishbutton.png) 0 -67px no-repeat;
+			width: 164px;
+		}
+		
+		#loginbutton { margin-top:10px; margin-left:470px; position:absolute; }
+		#loginbutton .fadeThis {
+			background:url(../img/loginbutton.png) 0 0 no-repeat;
+			width: 164px;
+		}
+		
+		 #loginbutton .fadeThis span.hover {
+			background:url(../img/loginbutton.png) 0 -67px no-repeat;
+			width: 164px;
+		}
+		
+	h1 {
+		font-size:34px;
+		font-family:BellGothicBT-Black;
+		position:absolute;
+		margin-left:300px;
+		margin-top:50px;
+	}
+	
+	
+	#screen2 {
+		margin-top:20px;
+		width:615px;
+		position:absolute;
+		background:url(../img/box_bg.png) repeat;
+		-moz-border-radius:30px 30px 30px 30px;
+	    -webkit-border-radius: 30px;
+		border-radius: 30px;
+	 	-webkit-box-shadow: 0 0 0 1px #babbaf;
+		-moz-border-shadow:0 0 0 1px #babbaf;
+		box-shadow:inset 0 0 10px #babbaf;
+		border:1px solid #b6b7ae;
+		padding:40px;
+	}
+	
+		h2 {
+			font-size:23px;
+			margin-top:15px;
+			color:#634e43;
+			margin-bottom:5px;
+		}
+	
+			h2.red {
+				color:#a02d31;
+				display:inline;
+				font-size:30px;
+				margin-top:0;
+			}
+		
+		h3 {
+			display:inline;
+			font-size:21px;
+			color:#7d6c60;
+		}
+	
+		.connect_button { position:absolute; margin-top:-30px; margin-left:150px; }
+		
+	
+		input[type="text"], input[type="password"] {
+		    -moz-border-radius:5px 5px 5px 5px;
+		    -webkit-border-radius: 5px;
+		    border:1px solid #acaca9;
+			box-shadow:inset 0 0 15px #dfdfdd;
+		    height:19px;
+		    font-size:15px;
+		    padding-left:6px;
+		    padding-top:5px;
+		    padding-bottom:4px;
+			padding-right:30px;
+		    color:#a02d31;	
+			position:absolute;
+			margin-top:2px;
+			font-family:BellGothic-Bold;
+		}
+	
+			input.large {
+			    padding-left:12px;
+			    padding-top:10px;
+			    padding-bottom:6px;
+				height:30px;
+			    font-size:20px;		
+			    -moz-border-radius:10px 10px 10px 10px;
+			    -webkit-border-radius: 10px;
+			    border:1px solid #acaca9;
+				box-shadow:inset 0 0 20px #dfdfdd;
+				width:310px;
+		    	color:#a02d31;
+				font-family:BellGothic-Bold;
+			}
+			
+			
+			
+		.dates {
+			background:url(../img/red_pattern.png) repeat #9c2c30;
+			display:block;
+			margin-left:330px;
+			width:255px;
+			height:150px;
+		    -moz-border-radius:10px 10px 10px 10px;
+		    -webkit-border-radius: 10px;
+			position:absolute;
+			margin-top:-210px;
+			padding-left:37px;
+			z-index:5;
+		}
+		
+			a.dateSelect {
+				height:31px;
+			    -moz-border-radius:10px 10px 10px 10px;
+			    -webkit-border-radius: 10px;
+			    border:1px solid #acaca9;
+				box-shadow:inset 0 0 15px #dfdfdd;
+			    font-size:20px;	
+			    padding-left:12px;
+				padding-right:12px;
+			    padding-top:14px;
+			    padding-bottom:2px;
+			    color:#c4baba;
+				text-decoration:none;
+				background:#fff;
+				position:absolute;
+				width:266px;
+			}
+	
+		.line {
+			width:100%;
+			height:6px;
+			background:#d8d9cf;
+			-moz-border-radius:3px 3px 3px 3px;
+		    -webkit-border-radius: 3px;
+			border-radius: 3px;
+			margin-top:30px;
+			margin-bottom:30px;
+		}
+		
+	
+	#screen3 {
+		margin-top:20px;
+		width:615px;
+		position:absolute;
+		background:url(../img/box_bg.png) repeat;
+		-moz-border-radius:30px 30px 30px 30px;
+	    -webkit-border-radius: 30px;
+		border-radius: 30px;
+	 	-webkit-box-shadow: 0 0 0 1px #babbaf;
+		-moz-border-shadow:0 0 0 1px #babbaf;
+		box-shadow:inset 0 0 10px #babbaf;
+		border:1px solid #b6b7ae;
+		padding:40px;
+	}
+
+		
+		
+	/* CONNECT */
+	.connectbutton {
+		font-size:20px;
+		float:left;
+		width:275px;
+		padding-right:15px;
+		border-right:1px solid #ccc;
+		text-decoration:none;
+		display:block;
+		color:#50382e;
+	}
