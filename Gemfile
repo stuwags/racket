@@ -10,7 +10,6 @@ group :development do
 end
 
 gem 'json'
-
 gem 'haml', '3.1.4'
 gem 'httparty'
 gem 'omniauth-singly'
@@ -31,6 +30,7 @@ gem 'jquery-rails'
 
 # Heroku dependencies
 group :production do
+  gem 'annotate'
   gem 'pg'
   gem 'thin'
 end
