@@ -7,11 +7,11 @@ class AuthController < ApplicationController
   def callback
     auth = request.env["omniauth.auth"]
     session[:access_token] = auth.credentials.token
-    redirect_to "/"
+    redirect_to :root
   end
 
   def logout
     session.clear
-    redirect_to "/"
+    redirect_to :root
   end
 end
