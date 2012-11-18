@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(:version => 20121118031028) do
     t.text     "comment"
     t.integer  "from_user_id"
     t.integer  "to_user_id"
+    t.string   "to_facebook_ids"
     t.boolean  "hit"
     t.boolean  "miss"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|

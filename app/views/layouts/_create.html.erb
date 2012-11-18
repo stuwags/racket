@@ -1,5 +1,37 @@
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+FB.init({
+       appId  : '172307756181800',
+       status : true,
+       cookie : true,
+       oauth: true
+     });
+	 var obj = ""
+
+function sendRequestViaMultiFriendSelector() {
+	FB.ui({method: 'apprequests',
+	 message: 'Sid served you with "' + $("#serve_name").val() + '" on Racket'
+	}, requestCallback);
+}
+
+ function requestCallback(response) {
+	 obj = response;
+	 list = "";
+
+     $.each(obj.to, function(i, item){
+		 list = item + ",";
+     });
+	 
+	 $.getScript('/serves/save_users/<%= @user.id %>/' + list);
+	 
+	 window.location = "/dashboard";
+  }
+</script>
+
 <%= form_for @serves do |f| %>
-  <%= f.text_field :name, :class => "large", :placeholder => "Your serve", :style => "width:98%", :type => "textbox" %><br />
-  <%= f.text_area :comment, :class => "large", :placeholder => "Say something about it (optional)", :style => "height:100px; width:98%;", :type => "textbox" %><br />
-  <%= f.submit :class => "button", :value => "Serve!", :style => "float:right; margin-top:10px;", :type => "textbox" %>
+  <%= f.text_field :name, :class => "large", :placeholder => "Your serve", :style => "width:98%", :type => "textbox", :id => "serve_name" %><br />
+  <%= f.text_area :comment, :class => "large", :placeholder => "Say something about it (optional)", :style => "height:100px; width:98%;", :type => "textbox", :id => "serve_comment" %><br />
+  <%= f.hidden_field :from_user_id, :value => @user.id %>
+  <%= f.submit :class => "button ajax_get", :value => "Serve!", :style => "float:right; margin-top:10px;", :onclick => "sendRequestViaMultiFriendSelector();" %>
 <% end %>

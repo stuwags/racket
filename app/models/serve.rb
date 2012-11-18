@@ -14,5 +14,5 @@
 #
 
 class Serve < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :name, :comment, :from_user_id, :to_user_id, :to_facebook_ids
 end

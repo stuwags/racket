@@ -17,9 +17,8 @@ $(document).ready(function() {
 	});
 	
 	var down = false;
-	$("#serve_button").click(function() { if(down) { $(".new_serve_from_dashboard").slideUp(); down = false;  } else { $(".new_serve_from_dashboard").slideDown(); down = true; } });
-	
-	
+	$("#serve_button").click(function() { if(down) { $(".new_serve_from_dashboard").slideUp(); down = false;  } else { $(".new_serve_from_dashboard").slideDown(); down = true; } });	
+
 	function isEmail(input) {
 		var indexAt = input.indexOf("@");
 		var indexDot = input.lastIndexOf(".");
@@ -63,5 +62,17 @@ $(document).ready(function() {
 			console.log("invalid");
 		}
 	}
+	
+    $('form#new_serve').live("submit", function(){
+      $.ajax({
+        type: "POST",
+        dataType: "script",
+        url: $(this).attr('action'),
+        data: $(this).serialize()
+      });
+      return false;
+    });
+
+	
 	
 });

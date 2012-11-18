@@ -5,8 +5,7 @@ SinglyRailsSkeleton::Application.routes.draw do
   root :to                       => "default#home"
   match "dashboard"                 => "default#dashboard"
   match "show"          => "auth#show"
+  match "serves/save_users/:user_id/:list"          => "serves#save_users"
   
-  match '/serves/new', :to => 'serve#new'
-  match '/serves/',     :to => 'serves#index'
-  match '/serves/:id', :to => 'serves#show'
+  resources :serves
 end
