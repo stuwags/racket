@@ -121,14 +121,14 @@ body
 	    padding-left:12px;
 	    padding-top:10px;
 	    padding-bottom:6px;
-	    font-size:20px;		
+	    font-size:16px;		
 	    -moz-border-radius:10px 10px 10px 10px;
 	    -webkit-border-radius: 10px;
 	    border:1px solid #acaca9;
 		box-shadow:inset 0 0 20px #dfdfdd;
 		width:310px;
+		margin-top:15px;
     	color:#a02d31;
-		font-family:BellGothic-Bold;
 	}
 	
 	
@@ -281,15 +281,15 @@ body
 			    padding-left:12px;
 			    padding-top:10px;
 			    padding-bottom:6px;
-				height:30px;
-			    font-size:20px;		
+				height:38px;
+			    font-size:22px;		
 			    -moz-border-radius:10px 10px 10px 10px;
 			    -webkit-border-radius: 10px;
 			    border:1px solid #acaca9;
 				box-shadow:inset 0 0 20px #dfdfdd;
 				width:310px;
 		    	color:#a02d31;
-				font-family:BellGothic-Bold;
+				margin-top:10px;
 			}
 			
 			

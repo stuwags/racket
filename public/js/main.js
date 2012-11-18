@@ -9,6 +9,10 @@ $(document).ready(function() {
 	  });
 	});
 	
+	$("#welcome_start_button").click(function() {
+		$("#welcome").hide("slide", { direction: "left" }, 500, function() { $("#start").fadeIn('slow'); });
+	});
+	
 	function isEmail(input) {
 		var indexAt = input.indexOf("@");
 		var indexDot = input.lastIndexOf(".");

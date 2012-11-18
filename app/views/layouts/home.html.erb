@@ -5,27 +5,29 @@
 					
 			<% if session[:access_token] %>		
 			<!-- WELCOME SCREEN -->
-			<div class="main" id="welcome" style="display:none;">
-				<h2>Welcome</h2>
-				<p>Racket is a two-player game you play with your friends and family. </p>
-				<p>It starts when you discover something awesome. It could be a movie, book, band, restaurant, museum... pretty much anything. </p>
-				<p>You serve that thing to any of your friends. They can hit or miss your serves, and serve their own great discoveries back at you.</p>
-				<p>As you and your friends build up your hit list, you’ll get to discover new things, earn rewards, and have fun together!</p>	
-			<div style="float:right;"><a href="#" class="button">Start serving &rarr;</a></div>
-			<p>&nbsp;</p>
+			<div class="main">
+				<div id="welcome">
+					<h2>Welcome</h2>
+					<p>Racket is a two-player game you play with your friends and family. </p>
+					<p>It starts when you discover something awesome. It could be a movie, book, band, restaurant, museum... pretty much anything. </p>
+					<p>You serve that thing to any of your friends. They can hit or miss your serves, and serve their own great discoveries back at you.</p>
+					<p>As you and your friends build up your hit list, you’ll get to discover new things, earn rewards, and have fun together!</p>	
+					<div style="float:right;"><a href="#" class="button" id="welcome_start_button">Start serving &rarr;</a></div>
+					<p>&nbsp;</p><br>
+				</div>
+				<div id="start" style="display:none;">
+					<h2>Start serving!</h2>
+					<h3>A serve can be anything worth discovering. Some ideas:</h3><br>
+					<div class="suggestions">
+						<a href="#">Skyfall</a>, <a href="#">Met Museum</a>, <a href="#">Breaking Bad</a>,  <a href="#">Coldplay</a>
+					</div>
+					<br><input size="30" placeholder="Your serve" class="large" style="width:98%;"><br>
+					<textarea class="large" placeholder="Say something about it (optional)" style="height:100px; width:98%;"></textarea><br>
+					<div style="float:right; margin-top:10px"><a href="#" class="button">Serve!</a></div>
+					<p>&nbsp;</p>
+				</div>&nbsp;
 			</div>
 			
-			<div class="main" id="start">
-				<h2>Start serving!</h2>
-				<h3>A serve can be anything worth discovering. Some ideas:</h3><br>
-				<div class="suggestions">
-					<a href="#">Skyfall</a>, <a href="#">Met Museum</a>, <a href="#">Breaking Bad</a>,  <a href="#">Coldplay</a>
-				</div>
-				<br><input size="30" placeholder="Enter your serve" class="large"><br>
-				<textarea class="large">Say something about it... (optional)</textarea><br>
-			<div style="float:right;"><a href="#" class="button">Serve!</a></div>
-			<p>&nbsp;</p>
-			</div>
 			<%= render :template => "layouts/sidebar" %>
 			
 			<% else %>
