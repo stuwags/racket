@@ -13,6 +13,10 @@ $(document).ready(function() {
 		$("#welcome").hide("slide", { direction: "left" }, 500, function() { $("#start").fadeIn('slow'); });
 	});
 	
+	var down = false;
+	$("#serve_button").click(function() { if(down) { $(".new_serve").slideUp(); down = false;  } else { $(".new_serve").slideDown(); down = true; } });
+	
+	
 	function isEmail(input) {
 		var indexAt = input.indexOf("@");
 		var indexDot = input.lastIndexOf(".");
