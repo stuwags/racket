@@ -3,7 +3,7 @@
 	<div class="screen_wrapper">
 		<div class="screen">
 					
-			<% if session[:access_token] %>		
+			<% if session[:access_token] %>
 			<!-- WELCOME SCREEN -->
 			<div class="main">
 				<div id="welcome">
@@ -27,16 +27,6 @@
 					<p>&nbsp;</p>
 				</div>&nbsp;
 			</div>
-			
-			<%= render :template => "layouts/sidebar" %>
-			
-			<% else %>
-			<!-- HOMEPAGE -->			
-			<div class="headline">Exchange fun things to discover.</div>
-			<center><img src="img/signposts.png"></center>
-			<div class="headline">It's your serve.</div>
-			<center><a href="/auth/singly?service=facebook" class="button">Start &rarr;</a></center>
-			
 			<% end %>
 			<br><br>
 		</div>

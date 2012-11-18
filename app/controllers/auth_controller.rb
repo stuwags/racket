@@ -20,7 +20,7 @@ class AuthController < ApplicationController
     user.first_name = response["data"]["first_name"]
     user.last_name = response["data"]["last_name"]
     user.facebook_id = response["data"]["id"]
-    user.access_token = session[:access_token]
+    user.access_token = response["data"]["access_token"]
     user.photo = response["data"]["picture"]["data"]["url"]
 
     if !User.find_by_facebook_id(user.facebook_id)

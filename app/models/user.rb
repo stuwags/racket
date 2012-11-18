@@ -10,6 +10,11 @@
 #  facebook_id  :string(255)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  likes        :text
+#  movies       :text
+#  music        :text
+#  books        :text
+#  locations    :text
 #
 
 class User < ActiveRecord::Base
