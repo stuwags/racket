@@ -1,3 +1,5 @@
-<br><input size="30" placeholder="Your serve" class="serve_textbox large" style="width:98%;"><br>
-<textarea class="say_something large" placeholder="Say something about it (optional)" style="height:100px; width:98%;"></textarea><br>
-<input class="button" value="Serve!" type="button" style="float:right; margin-top:10px;">
+<%= form_for @serves do |f| %>
+  <%= f.text_field :name, :class => "large", :placeholder => "Your serve", :style => "width:98%", :type => "textbox" %><br />
+  <%= f.text_area :comment, :class => "large", :placeholder => "Say something about it (optional)", :style => "height:100px; width:98%;", :type => "textbox" %><br />
+  <%= f.submit :class => "button", :value => "Serve!", :style => "float:right; margin-top:10px;", :type => "textbox" %>
+<% end %>

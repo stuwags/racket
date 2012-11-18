@@ -13,11 +13,11 @@ $(document).ready(function() {
 	});
 	
 	$("#welcome_start_button").click(function() {
-		$("#welcome").hide("slide", { direction: "left" }, 500, function() { $("#start").fadeIn('slow'); });
+		$("#welcome").hide("slide", { direction: "left" }, 500, function() { $("#start").fadeIn('fast'); });
 	});
 	
 	var down = false;
-	$("#serve_button").click(function() { if(down) { $(".new_serve").slideUp(); down = false;  } else { $(".new_serve").slideDown(); down = true; } });
+	$("#serve_button").click(function() { if(down) { $(".new_serve_from_dashboard").slideUp(); down = false;  } else { $(".new_serve_from_dashboard").slideDown(); down = true; } });
 	
 	
 	function isEmail(input) {
