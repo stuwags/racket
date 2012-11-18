@@ -1,0 +1,43 @@
+	<center><div id="logobutton" align="center"><a href="/" class="fadeThis" id="logo"><span>Racket</span></a></div></center>
+
+	<div class="screen_wrapper">
+		<div class="screen">
+					
+			<% if session[:access_token] %>		
+			<!-- WELCOME SCREEN -->
+			<div class="main">
+				<div id="welcome">
+					<h2>Welcome</h2>
+					<p>Racket is a two-player game you play with your friends and family. </p>
+					<p>It starts when you discover something awesome. It could be a movie, book, band, restaurant, museum... pretty much anything. </p>
+					<p>You serve that thing to any of your friends. They can hit or miss your serves, and serve their own great discoveries back at you.</p>
+					<p>As you and your friends build up your hit list, you’ll get to discover new things, earn rewards, and have fun together!</p>	
+					<div style="float:right;"><a href="#" class="button" id="welcome_start_button">Start serving &rarr;</a></div>
+					<p>&nbsp;</p><br>
+				</div>
+				<div id="start" style="display:none;">
+					<h2>Start serving!</h2>
+					<h3>A serve can be anything worth discovering. Some ideas:</h3><br>
+					<div class="suggestions">
+						<a href="#">Skyfall</a>, <a href="#">Met Museum</a>, <a href="#">Breaking Bad</a>,  <a href="#">Coldplay</a>
+					</div>
+					<br><input size="30" placeholder="Your serve" class="large" style="width:98%;"><br>
+					<textarea class="large" placeholder="Say something about it (optional)" style="height:100px; width:98%;"></textarea><br>
+					<div style="float:right; margin-top:10px"><a href="#" class="button">Serve!</a></div>
+					<p>&nbsp;</p>
+				</div>&nbsp;
+			</div>
+			
+			<%= render :template => "layouts/sidebar" %>
+			
+			<% else %>
+			<!-- HOMEPAGE -->			
+			<div class="headline">Exchange fun things to discover.</div>
+			<center><img src="img/signposts.png"></center>
+			<div class="headline">It's your serve.</div>
+			<center><a href="/auth/singly?service=facebook" class="button">Start &rarr;</a></center>
+			
+			<% end %>
+			<br><br>
+		</div>
+	</div>

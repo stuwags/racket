@@ -18,6 +18,10 @@ class DefaultController < ApplicationController
     
      render :template => 'layouts/home'
   end
+  
+  def dashboard    
+     render :template => 'layouts/dashboard'
+  end
 
 private
 

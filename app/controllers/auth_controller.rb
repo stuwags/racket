@@ -10,17 +10,22 @@ class AuthController < ApplicationController
 
     @user = User.new
 
-    # @user = session[user]
-    # @user.first_name = session[first_name]
-    # @user.last_name = session[last_name]
-    # @user.phot0 = session[photo]
-    # @user.access_token = session[access_token]
-    # @user.facebook_id = session[facebook_id]
-    # if @user.save
-    #   redirect_to :root
-    # else
-    #   render :callback
-    # end
+    auth = request.env["omniauth.auth"]
+    session[:access_token] = auth.credentials.token
+    # redirect_to :root
+
+    response = HTTParty.get("https://api.singly.com/profiles/facebook?access_token=#{session[:access_token]}")
+
+    user = User.new
+    user.first_name = response["data"]["first_name"]
+    user.last_name = response["data"]["last_name"]
+    user.facebook_id = response["data"]["id"]
+    user.access_token = session[:access_token]
+    user.photo = response["data"]["picture"]["data"]["url"]
+
+    if !User.find_by_facebook_id(user.facebook_id)
+      user.save
+    end
   end
 
   def show
