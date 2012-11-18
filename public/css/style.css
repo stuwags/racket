@@ -9,6 +9,8 @@ body
 }
 	
 	.bold { font-family:BellGothicBT-Black; }
+	.left { float:left; }
+	.right { float:right; }
 
 	input::-webkit-input-placeholder {
 	    color: #bababa;
@@ -97,6 +99,66 @@ body
 		}
 	
 	
+	.listing {
+		background:#f4f4f4;
+		margin-top:15px;
+		margin-bottom:20px;
+		border-radius:5px;
+		padding:10px;
+		border:1px solid #dbdbdb;
+		float:left;
+		width:565px;
+	}
+
+		.listing h3 {
+			color:#ce4d2d;
+		}
+	
+		.listing img {
+			float:left;
+			margin-right:10px;
+		}
+		
+		.listing .ago {
+			color:#aa786c;
+		}
+		
+		.listing .info {
+			width:150px;
+		}
+		
+		.listing .icon {
+			color:#aa786c;
+			height:30px;
+			display:block;
+			float:left;
+			width:40px;
+			padding-left:35px;
+			padding-top:5px;
+			margin-top:10px;
+		}
+		
+		.listing .icon.open {
+			background:url(../img/icon_open.png) no-repeat;
+			margin-left:70px;
+		}
+		
+		.listing .icon.hits {
+			background:url(../img/icon_hits.png) no-repeat;
+		}
+		
+		.listing .icon.misses {
+			background:url(../img/icon_misses.png) no-repeat;
+		}
+		
+		.listing .arrow {
+			color:#ce4d2d;
+			font-size:40px;
+			margin-top:-5px;
+			float:right;
+			margin-right:10px;
+		}
+	
 	.side {
 		float:left;
 		border-left: 3px solid #f4f4f4;
@@ -131,6 +193,11 @@ body
     	color:#a02d31;
 	}
 	
+	
+	#start_button {
+		margin-top:5px;
+		float:right;
+	}
 	
 	/* Old code which I'm using as the base design, will remove or port to the top of this line*/
 	
@@ -352,6 +419,7 @@ body
 		border:1px solid #b6b7ae;
 		padding:40px;
 	}
+	
 
 		
 		
