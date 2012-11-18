@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	
+	$('.button').hover(function() { $(this).animate({backgroundColor: '#19784d'}); }, function() { $(this).animate({backgroundColor: '#1aad63'}); });
+	$('.listing').hover(function() { $(this).animate({backgroundColor: '#dcdcdc'}); }, function() { $(this).animate({backgroundColor: '#f4f4f4'}); });
+	
 	$('.fadeThis').append('<span class="hover"></span>').each(function () {
 	  var $span = $('> span.hover', this).css('opacity', 0);
 	  $(this).hover(function () {

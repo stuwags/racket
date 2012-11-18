@@ -36,6 +36,11 @@ body
 	
 	h1, h2 { text-shadow:#fff 1px 1px; }
 	
+	.serve_something {
+		height:100px;
+		width:98%;
+	}
+	
 	.screen_wrapper {
 		background:#fff;
 		padding: 10px;
@@ -55,7 +60,7 @@ body
 		}
 	
 	
-	a.button {
+	a.button, input.button {
 		color: white;
 		background: #1AAD63;
 		text-decoration: none;
@@ -66,12 +71,12 @@ body
 		padding-bottom: 8px;
 		font-size: 28px;
 		border: 1px solid #0B8940;
+		cursor:pointer;
 	}
 	
-		a.button:hover {
+		a.button:hover, input.button:hover {
 			border:1px solid #19784d;
 		}
-	
 	
 	.main {
 		width: 590px;
@@ -169,7 +174,7 @@ body
 	
 	
 	.new_serve { position:absolute; background:#bed3ca; width:300px; padding-left:10px; padding-right:20px; padding-bottom:20px; border-radius:10px; margin-left:270px; margin-top:10px; display:none; }
-		.close { text-decoration:none; font-size:20px; color:#b74226; margin-top:20px; margin-left:10px; display:block; }
+		.close { text-decoration:none; font-size:20px; color:#fff; margin-top:20px; margin-left:10px; display:block; }
 		
 		.side h3 {
 			font-size:25px;
